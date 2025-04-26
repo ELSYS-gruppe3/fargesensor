@@ -8,7 +8,6 @@
 SparkFun_APDS9960 apds = SparkFun_APDS9960();
 SparkFun_APDS9960* apds_ptr = &apds;
 Fargesensor fargesensor(apds_ptr);
-// SinkSensor testSensor(apds_ptr);
 
 int PWM_LED = 5;
 int RED = 17;
@@ -36,10 +35,6 @@ void setup() {
 
   fargesensor.init();
 
-  //Serial.println("Wire started");
-
-  //testSensor.setup();
-
   analogWrite(PWM_LED, 255);
 
   Serial.println("Sensor initialized");
@@ -66,30 +61,6 @@ void loop() {
     }
     analogWrite(PWM_LED,0);
   }
-  // else {Serial.println("LOW");}
-
-    // testLed.setColor("Green");
-    // for(int i = 200; i <= 255; i++) {
-    //   analogWrite(PWM_LED, i);
-    //   delay(30);
-    // }
-  //   testLed.setColor("Blue");
-  //   analogWrite(PWM_LED,255);
-  //   delay(50);
-  //   fargesensor.oppdaterFarger();
-  //   Serial.println("Rød:"+fargesensor.returnerRod()+" Grønn:"+fargesensor.returnerGronn()+" Blå:"+fargesensor.retunerBlaa());
-  //   for(int i = 200; i <= 255; i++) {
-  //     analogWrite(PWM_LED, i);
-  //     Serial.print
-  //     delay(30);
-  //   }
-
-  //   testLed.setColor("Red");
-  //   analogWrite(PWM_LED, 255);
-  //   delay(1000);
-
-  // }
-  // else {Serial.println("LOW");}
 
 }
 
