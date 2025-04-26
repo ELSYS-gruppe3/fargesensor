@@ -16,8 +16,6 @@ int BLUE = 19;
 
 int START_BUTTON = 16;
 
-int NEW_TEST = 23;
-
 Led testLed(RED, GREEN, BLUE);
 
 
